@@ -17,11 +17,9 @@ phases:
       - echo Running build steps...
       - source .venv/bin/activate && pytest test_app.py
       - echo Packaging application...
-      - zip -r app-package.zip
   post_build:
     commands:
       - echo Build completed successfully.
 artifacts:
   files:
-    - app-package.zip
     - '**/*.log'
